@@ -33,7 +33,7 @@ if ($isAdmin) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head><?php renderHead('Admin — Messages'); ?></head>
+<head><?php renderHead('Admin - Chomneanh'); ?></head>
 <body class="min-h-screen bg-white">
 
 <?php if (!$isAdmin): ?>
