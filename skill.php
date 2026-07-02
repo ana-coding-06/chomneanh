@@ -62,7 +62,7 @@ $c           = cat_colors($skill['color']);
 
 $stats = ['streak'=>userStreak($pdo,$uid),'completions'=>userTotalCompletions($pdo,$uid),'points'=>userPoints($pdo,$uid)];
 
-render_page_open(htmlspecialchars($skill['title']).' — Chomneanh', 'home', $user, $stats);
+render_page_open(htmlspecialchars($skill['title']).' - Chomneanh', 'home', $user, $stats);
 ?>
 
 <div class="mx-auto max-w-3xl px-4 py-5">
