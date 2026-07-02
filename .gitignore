@@ -1,0 +1,8 @@
+# Uploaded avatars (keep the folder, ignore the files)
+uploads/*
+!uploads/.gitkeep
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
