@@ -5,7 +5,7 @@ if (isLoggedIn()) { header('Location: index.php'); exit; }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head><?php renderHead('CHOMNEANH'); ?></head>
+<head><?php renderHead('Welcome - Chomneanh'); ?></head>
 <body class="min-h-screen bg-white flex flex-col">
 
   <!-- Top bar -->
