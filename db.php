@@ -15,7 +15,7 @@ define('USE_RAILWAY', true);
 
 // ---- Local XAMPP credentials -------------------------------------------------
 define('LOCAL_HOST', '127.0.0.1');
-define('LOCAL_PORT', '3307');      // XAMPP default is 3306 (yours may be 3307)
+define('LOCAL_PORT', '3307');
 define('LOCAL_USER', 'root');
 define('LOCAL_PASS', '');
 define('LOCAL_NAME', 'chomneanh');
@@ -178,7 +178,7 @@ function seedContent(PDO $pdo): void {
     // ---- SKILLS --------------------------------------------------------------
     // color is a category token resolved to real colors in the frontend.
     $skills = [
-        ['egg','Cook a Perfect Egg','Master soft, hard and fried eggs - the foundation of every quick meal.','Cooking','Beginner',7,'egg-fried','cooking',1],
+        ['egg','Cook a Perfect Egg','Master soft, hard and fried eggs, the foundation of every quick meal.','Cooking','Beginner',7,'egg-fried','cooking',1],
         ['draw','Draw a Cartoon Face','Turn simple shapes into expressive, fun cartoon characters.','Art','Beginner',8,'palette','art',2],
         ['spanish','Speak 5 Spanish Phrases','Handle a friendly conversation with confidence.','Language','Beginner',6,'language','language',3],
         ['knots','Tie 3 Useful Knots','Knots that come in handy for camping, packing and everyday fixes.','Practical','Intermediate',9,'rotate-clockwise','practical',4],
