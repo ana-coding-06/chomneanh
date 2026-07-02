@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head><?php renderHead('Sign up — Chomneanh'); ?></head>
+<head><?php renderHead('Sign up - Chomneanh'); ?></head>
 <body class="min-h-screen bg-white flex flex-col">
 
   <header class="w-full">
