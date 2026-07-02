@@ -178,18 +178,18 @@ function seedContent(PDO $pdo): void {
     // ---- SKILLS --------------------------------------------------------------
     // color is a category token resolved to real colors in the frontend.
     $skills = [
-        ['egg','Cook a Perfect Egg','Master soft, hard, and fried eggs — the foundation of every quick meal.','Cooking','Beginner',7,'egg-fried','cooking',1],
+        ['egg','Cook a Perfect Egg','Master soft, hard and fried eggs - the foundation of every quick meal.','Cooking','Beginner',7,'egg-fried','cooking',1],
         ['draw','Draw a Cartoon Face','Turn simple shapes into expressive, fun cartoon characters.','Art','Beginner',8,'palette','art',2],
-        ['spanish','Speak 5 Spanish Phrases','Handle a friendly first conversation with confidence.','Language','Beginner',6,'language','language',3],
-        ['knots','Tie 3 Useful Knots','Knots that come in handy for camping, packing, and everyday fixes.','Practical','Intermediate',9,'rotate-clockwise','practical',4],
+        ['spanish','Speak 5 Spanish Phrases','Handle a friendly conversation with confidence.','Language','Beginner',6,'language','language',3],
+        ['knots','Tie 3 Useful Knots','Knots that come in handy for camping, packing and everyday fixes.','Practical','Intermediate',9,'rotate-clockwise','practical',4],
         ['breathing','Calm Breathing in 5 Min','A quick box-breathing routine to reset your focus and mood.','Wellness','Beginner',5,'lungs','wellness',5],
         ['coffee','Brew Better Coffee','Small tweaks that turn an okay cup into a great one.','Cooking','Beginner',7,'coffee','cooking',6],
-        ['typing','Touch Type Faster','Build muscle memory for the home row and stop looking down.','Tech','Intermediate',8,'keyboard','tech',7],
+        ['typing','Touch Type Faster','Build muscle memory for hands and stop looking down.','Tech','Intermediate',8,'keyboard','tech',7],
         ['origami','Basic Paper Origami','Fold a classic origami crane from a single sheet of paper.','Art','Beginner',7,'plane','art',8],
         ['budget','Make a Simple Budget','Take control of your money with a basic monthly budget.','Finance','Beginner',9,'coin','finance',9],
         ['pushups','Do 10 Proper Push-ups','Master the correct push-up form before worrying about reps.','Fitness','Beginner',6,'barbell','fitness',10],
         ['speedread','Speed Read a Page','Simple techniques to read faster without losing comprehension.','Learning','Intermediate',7,'book','learning',11],
-        ['smoothie','Make a Green Smoothie','A quick, healthy smoothie that tastes good — even with greens.','Cooking','Beginner',5,'leaf','wellness',12],
+        ['smoothie','Make a green Smoothie','A quick, healthy smoothie that tastes good - even with greens.','Cooking','Beginner',5,'leaf','wellness',12],
     ];
     $stmt = $pdo->prepare("INSERT INTO skills (id,title,description,category,difficulty,minutes,icon,color,sort_order) VALUES (?,?,?,?,?,?,?,?,?)");
     foreach ($skills as $s) $stmt->execute($s);
@@ -197,65 +197,65 @@ function seedContent(PDO $pdo): void {
     // ---- STEPS ---------------------------------------------------------------
     $steps = [
         // egg
-        ['egg',1,'egg','Pick your egg','Use a fresh, room-temperature egg. Crack it on a flat surface, not the bowl edge, to avoid shell bits.'],
+        ['egg',1,'egg','Pick your egg','Use a fresh, room-temperature egg. Crack it on a flat surface, not the bowl edge to avoid shell bits.'],
         ['egg',2,'flame','Heat the pan','Medium-low heat with a little butter or oil. Wait until the butter foams but doesn\'t brown.'],
         ['egg',3,'clock','Cook with patience','For a sunny-side up, cover the pan for 2 minutes. Low and slow gives soft whites and a runny yolk.'],
         ['egg',4,'salt','Season at the end','Salt right before serving so the whites stay tender. Add black pepper and a pinch of flaky salt.'],
         // draw
-        ['draw',1,'circle','Start with a circle','Draw a light circle for the head. Don\'t press hard — this is just a guide you\'ll refine.'],
+        ['draw',1,'circle','Start with a circle','Draw a light circle for the head. Use a pencil so you can erase later.'],
         ['draw',2,'plus','Add guide lines','Draw a cross through the circle. The horizontal line is eye level, the vertical is the center.'],
         ['draw',3,'eye','Place the eyes','Two ovals on the horizontal line, one eye-width apart. Bigger eyes feel friendlier.'],
-        ['draw',4,'mood-smile','Bring it to life','Add a curved smile, a small nose, and eyebrows to set the mood. Erase your guide lines.'],
+        ['draw',4,'mood-smile','Bring it to life','Add a curved smile, a small nose, and eyebrows to set the mood.'],
         // spanish
-        ['spanish',1,'hand-stop','Greet someone','"Hola, ¿cómo estás?" — Hi, how are you? Say it out loud three times.'],
-        ['spanish',2,'message','Reply','"Estoy bien, gracias." — I\'m good, thank you. Smile while you say it.'],
+        ['spanish',1,'hand-stop','Greet someone','"Hola, ¿cómo estás?" - Hi, how are you? Say it out loud three times.'],
+        ['spanish',2,'message','Reply','"Estoy bien, gracias." - I\'m good, thank you. Smile while you say it.'],
         ['spanish',3,'heart','Be polite','"Por favor" (please) and "gracias" (thank you) go a long way everywhere.'],
-        ['spanish',4,'wave-sine','Say goodbye','"Hasta luego" — See you later. Practice the full mini-conversation start to finish.'],
+        ['spanish',4,'wave-sine','Say goodbye','"Hasta luego" - See you later. Practice the full mini-conversation start to finish.'],
         // knots
-        ['knots',1,'rotate-clockwise','The Overhand Loop','Make a loop, pass the end through it. The simplest knot — your building block for the rest.'],
-        ['knots',2,'arrow-loop-right','The Bowline','Makes a fixed loop that won\'t slip — the most useful knot you\'ll ever learn.'],
+        ['knots',1,'rotate-clockwise','The Overhand Loop','Make a loop, pass the end through it. The simplest knot - your building block for the rest.'],
+        ['knots',2,'arrow-loop-right','The Bowline','Makes a fixed loop that won\'t slip - the most useful knot you\'ll ever learn.'],
         ['knots',3,'anchor','The Cleat Hitch','Figure-eight around a cleat, finish with a locking hitch. Perfect for securing boats or tarps.'],
         ['knots',4,'repeat','Practice the set','Tie all three in a row. Speed and muscle memory come from repetition.'],
         // breathing
         ['breathing',1,'armchair','Get comfortable','Sit upright with relaxed shoulders. Rest your hands on your knees and close your eyes.'],
         ['breathing',2,'arrow-up','Inhale for 4','Breathe in slowly through your nose for a count of four. Fill your belly, not just your chest.'],
-        ['breathing',3,'player-pause','Hold for 4','Gently hold the breath for four counts. Stay relaxed — no straining.'],
+        ['breathing',3,'player-pause','Hold for 4','Gently hold the breath for four counts. Stay relaxed - no straining.'],
         ['breathing',4,'arrow-down','Exhale for 4','Release slowly through your mouth for four counts. Repeat the cycle four times.'],
         // coffee
-        ['coffee',1,'scale','Measure the ratio','Aim for about 1:16 — 15g coffee to 250g water. Consistency makes it repeatable.'],
+        ['coffee',1,'scale','Measure the ratio','Aim for about 1:16 - 15g coffee to 250g water. Consistency makes it repeatable.'],
         ['coffee',2,'temperature','Mind the water','Use water just off the boil (about 93°C). Boiling water scorches the grounds.'],
         ['coffee',3,'hourglass','Bloom first','Pour a little water, wait 30 seconds for it to bubble, then pour the rest slowly in circles.'],
         ['coffee',4,'mood-tongue','Taste & adjust','Too bitter? Grind coarser. Too sour? Grind finer. Tweak one thing at a time.'],
         // typing
-        ['typing',1,'hand-finger','Find the home row','Left fingers on A S D F, right on J K L ; — feel the bumps on F and J.'],
-        ['typing',2,'pointer','One finger per key','Each finger owns specific keys. Never reach across — index fingers cover 2 columns each.'],
-        ['typing',3,'eye','Eyes on the screen','Force yourself not to look down. It feels slow at first — that\'s normal and temporary.'],
+        ['typing',1,'hand-finger','Find the home row','Left fingers on A S D F, right on J K L ; - feel the bumps on F and J.'],
+        ['typing',2,'pointer','One finger per key','Each finger owns specific keys. Never reach across - index fingers cover 2 columns each.'],
+        ['typing',3,'eye','Eyes on the screen','Force yourself not to look down. It feels slow at first - that\'s normal and temporary.'],
         ['typing',4,'repeat','Repeat short drills','Type "asdf jkl;" over and over for 3 minutes. Speed comes after accuracy, not before.'],
         // origami
         ['origami',1,'file','Start with a square','Fold a square diagonally both ways, then straight both ways. Unfold each time.'],
-        ['origami',2,'triangle','Make the base','Collapse along the crease lines into a small diamond — the preliminary base.'],
+        ['origami',2,'triangle','Make the base','Collapse along the crease lines into a small diamond - the preliminary base.'],
         ['origami',3,'arrows-left-right','Shape the wings','Fold edges to the center line on both sides, flip and repeat. Open the inner flaps gently.'],
         ['origami',4,'plane','Form head & tail','Pull the two narrow points outward for the neck and tail, then pinch the head into shape.'],
         // budget
-        ['budget',1,'download','List your income','Write down every source of money each month — salary, allowance, freelance, anything.'],
+        ['budget',1,'download','List your income','Write down every source of money each month - salary, allowance, freelance, anything.'],
         ['budget',2,'upload','List your expenses','Write every regular cost: rent, food, transport, subscriptions. Group as needs vs wants.'],
         ['budget',3,'minus','Subtract & check','Income minus expenses = what\'s left. Negative means you spend more than you earn.'],
         ['budget',4,'target','Set one saving goal','Pick one thing to save for. Even saving 5% of income each month adds up fast.'],
         // pushups
         ['pushups',1,'hand-two-fingers','Set your hands','Hands slightly wider than shoulders. Fingers spread, wrists straight under your shoulders.'],
-        ['pushups',2,'line-dashed','Lock your body','Feet together, core tight, hips level — a straight line from head to heels.'],
+        ['pushups',2,'line-dashed','Lock your body','Feet together, core tight, hips level - a straight line from head to heels.'],
         ['pushups',3,'arrow-down','Lower with control','Bend elbows 45° to your body. Chest nearly touches the floor.'],
         ['pushups',4,'arrow-up','Push all the way up','Fully extend your arms at the top. Don\'t let hips sag. That\'s one rep.'],
         // speedread
-        ['speedread',1,'pointer','Use a pointer','Move your finger under each line. Your eyes follow movement — this stops backtracking.'],
+        ['speedread',1,'pointer','Use a pointer','Move your finger under each line. Your eyes follow movement - this stops backtracking.'],
         ['speedread',2,'volume-3','Stop subvocalizing','You don\'t need to "hear" every word. Read slightly faster than you can speak.'],
-        ['speedread',3,'layout-grid','Read in chunks','Train your eyes to grab 2–3 words at a time. Focus in the middle of the group.'],
+        ['speedread',3,'layout-grid','Read in chunks','Train your eyes to grab 2-3 words at a time. Focus in the middle of the group.'],
         ['speedread',4,'clock','Time yourself','Read one page normally and note the time. Re-read with the techniques and compare.'],
         // smoothie
         ['smoothie',1,'leaf','Add greens first','A handful of spinach or kale goes in first. Spinach has the mildest taste for beginners.'],
         ['smoothie',2,'apple','Add fruit','One banana plus frozen mango or berries. The sweetness hides the greens completely.'],
         ['smoothie',3,'droplet','Add liquid','About 1 cup of water, coconut water, or milk. Less = thicker, more = drinkable.'],
-        ['smoothie',4,'refresh','Blend and taste','Blend 30–60 seconds until smooth. Taste — add more fruit if needed, then blend again.'],
+        ['smoothie',4,'refresh','Blend and taste','Blend 30-60 seconds until smooth. Taste — add more fruit if needed, then blend again.'],
     ];
     $stmt = $pdo->prepare("INSERT INTO skill_steps_content (skill_id,step_order,icon,title,detail) VALUES (?,?,?,?,?)");
     foreach ($steps as $s) $stmt->execute($s);
